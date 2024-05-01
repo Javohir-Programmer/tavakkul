@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
-
 * {
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     transition: 0.3s ease-in-out;
 }
-
 :root{
     --qora: #2b2b2b;
     --oq: white;
@@ -29,6 +27,11 @@ body{
 /* ================================================================ */
 /*          header nav */
 /* ================================================================ */
+
+.nav-bar{
+    display: none;
+}
+
 header{
     background-image: url(image/foto2.jpg);
     width: 100%;
@@ -46,8 +49,11 @@ header nav{
 }
 
 .nav-logo{
-    display: flex;
+    /* display: flex; */
     /* border: 1px solid red; */
+}
+.nav-logo-2{
+    display: flex;
 }
 .nav-logo i{
     margin-top: 2px;
@@ -86,6 +92,9 @@ header nav{
     font-size: 25px;
     color: var(--qora);
 }
+.nav-icons .bx-menu{
+    display: none;
+}
 .nav-icons-darkmood i{
     /* position: absolute; */
     /* top: 0; */
@@ -103,7 +112,7 @@ header nav{
 
 /* menu-icon */
 
-.nav-icons .bx-menu{
+.menu-icon i{
     display: none;
     font-size: 25px;
     color: var(--qora);
@@ -143,53 +152,35 @@ header nav{
 }
 
 
-
-
-@media screen and (max-width: 800px) {
-    
-
-    nav{
-        padding: 10px;
+@media screen and (max-width:800px) {
+    header nav{
         display: block;
-        border: 1px solid red;
-        /* justify-content: space-between; */
-    }
-    .nav-logo{
-        border: 1px solid red;
+        text-align: center;
+        justify-content: center;
     }
     .nav-collages{
         display: none;
     }
-    .nav-icons{
-        border: 1px solid red;
+    .nav-logo{
+        /* border: 1px solid red; */
+        display: block;
+        margin: auto;
+        max-width: 160px;
     }
-    
+    .nav-icons{
+        margin: 10px ;
+        /* border: 1px solid red; */
+        justify-content: space-around;
+    }
+    .nav-icons .bx-menu{
+        display: block;
+    }
 
 }
-    
-/* 
-@media screen and (max-width:420px) {
-    nav{
-        padding: 10px;
-        justify-content: space-between;
-    }
-    .nav-collages{
-        display: none;
-    }
 
-    .menu-icon i {
-        display: block;
-        border: 1px solid red;
-        padding: 0 0px 0 0;
+@media screen and (max-width: 420px) {
+    header{
+        background-size: cover;
     }
+}
 
-    .nav-logo{
-        border: 1px solid red;
-    }
-    .nav-icons{
-        border: 1px solid red;
-    }
-    .nav-icons i{
-        margin: 0 10px;
-    }
-} */
