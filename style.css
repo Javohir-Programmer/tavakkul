@@ -124,7 +124,7 @@ header nav{
 /* nav-box */
 
 .menu-box{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     z-index: 11;
@@ -219,7 +219,6 @@ header nav{
     .container{
         padding: 20px;
     }
-
     .boxes{
         display: grid;
         grid-template-columns: auto auto;
@@ -229,9 +228,8 @@ header nav{
         max-width: 400px;
         border: 1px solid grey;
         border-radius: 16px;
-        
+    
     }
-
     .boxes hr{
         display: none;
     }
