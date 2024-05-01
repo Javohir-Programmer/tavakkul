@@ -117,6 +117,44 @@ header nav{
     font-size: 25px;
     color: var(--qora);
 }
+.left{
+    left: 0 !important;
+}
+
+/* nav-box */
+
+.menu-box{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 11;
+    width: 40%;
+    height: 100vh;
+    background-color: var(--oq);
+    /* border: 1px solid red; */
+}
+
+.menu-box i{
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    color: var(--qora);
+}
+
+.menu-box ul{
+    margin-top: 50px;
+    display: block;
+    list-style: none;
+}
+
+.menu-box ul li a{
+    display: block;
+    font-size: 16px;
+    margin: 20px 10px;
+    text-decoration: none;
+    color: var(--qora);
+}
 
 /* =============================== */
 /*             Container           */
@@ -124,6 +162,7 @@ header nav{
 
 .container{
     width: 100%;
+    height: auto;
     background-color: var(--oq);
     align-items: center;
     box-shadow: 0px 1px 5px 0 rgb(90, 90, 90);
@@ -134,7 +173,7 @@ header nav{
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
-    height: 150px;
+    height: auto;
     margin: auto;
 }
 .container .box{
@@ -175,12 +214,49 @@ header nav{
     .nav-icons .bx-menu{
         display: block;
     }
+    /* boxes */
+
+    .container{
+        padding: 20px;
+    }
+
+    .boxes{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+    }
+    .box{
+        max-width: 400px;
+        border: 1px solid grey;
+        border-radius: 16px;
+        
+    }
+
+    .boxes hr{
+        display: none;
+    }
 
 }
 
 @media screen and (max-width: 420px) {
-    header{
-        background-size: cover;
+    .menu-box{
+        width: 50%;
     }
+    .menu-box ul li a{
+        margin-left: 0;
+    }
+
+    /* boxes */
+
+    .boxes{
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .box{
+        display: block;
+        margin: auto;
+    }
+    
 }
 
